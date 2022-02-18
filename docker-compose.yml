@@ -1,0 +1,19 @@
+version: '3'
+services:
+  uwsgi:
+    deploy:
+      resources:
+        limits:
+          cpus: '0.7'
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 8000:8000
+
+  nginx:
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - 80:80
