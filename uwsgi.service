@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/var/www/piro_docker/venv/bin/uwsgi --emperor /var/www/django/ini
+User=django
+Group=www-data
+Restart=on-failure
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

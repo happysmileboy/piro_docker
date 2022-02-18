@@ -1,2 +1,5 @@
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
 .git
 */db.sqlite3
+.gitignore
