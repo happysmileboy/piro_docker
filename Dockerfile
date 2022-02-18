@@ -10,6 +10,7 @@ RUN    apt-get -y install vim
 RUN    apt-get -y install python3.9-dev python3-venv python3-pip
 RUN    apt-get -y install nginx
 RUN    apt-get -y install supervisor
+RUN    apt-get -y install postgresql postgresql-contrib libpq-dev
 
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 RUN chown -R www-data:www-data /var/lib/nginx
